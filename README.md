@@ -75,10 +75,6 @@ Options:
 - Python
 - PyMuPDF (fitz) >= 1.20.0
 
-## License
-
-This project is licensed under the GNU Affero General Public License v3.0 – see the [LICENSE](LICENSE) file for details.
-
 ## Version History
 
 ### v0.1.0
@@ -92,3 +88,7 @@ This project is licensed under the GNU Affero General Public License v3.0 – se
 ## Acknowledgments
 
 CheePDF is built using [PyMuPDF](https://pymupdf.readthedocs.io/) for PDF processing
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 – see the [LICENSE](LICENSE) file for details.
