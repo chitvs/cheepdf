@@ -81,25 +81,45 @@ class PDFParser:
                 
                 for annot in annotations:
                     try:
-                        annot_type = annot.type[1] if annot.type else "Unknown"
+                        annot_type = "Unknown"
+                        if hasattr(annot, 'type') and annot.type:
+                            if isinstance(annot.type, (list, tuple)) and len(annot.type) > 1:
+                                annot_type = annot.type[1]
+                            elif isinstance(annot.type, str):
+                                annot_type = annot.type
+                        
                         annotation_info['annotation_types'].add(annot_type)
+                        
+                        content = ""
+                        if hasattr(annot, 'content') and annot.content:
+                            content = str(annot.content)
+                        
+                        author = ""
+                        if hasattr(annot, 'info') and annot.info and isinstance(annot.info, dict):
+                            author = annot.info.get("title", "")
+                        
+                        rect = None
+                        if hasattr(annot, 'rect') and annot.rect:
+                            try:
+                                rect = list(annot.rect)
+                            except (TypeError, ValueError):
+                                rect = None
                         
                         annot_details = {
                             'page': page_num + 1,
                             'type': annot_type,
-                            'content': annot.content or "",
-                            'author': annot.info.get("title", "") if annot.info else "",
-                            'rect': list(annot.rect) if annot.rect else None
+                            'content': content,
+                            'author': author,
+                            'rect': rect
                         }
                         
                         annotation_info['annotation_details'].append(annot_details)
                         page_annotations.append(annot_details)
-                        
                         annotation_info['total_annotations'] += 1
                         page_annot_count += 1
                         
                     except Exception as e:
-                        print(f"Warning: Could not process annotation on page {page_num + 1}: {e}")
+                        print(f"Warning: Could not process annotation on page {page_num + 1}: {type(e).__name__}: {e}")
                         annotation_info['total_annotations'] += 1
                         page_annot_count += 1
                 
@@ -111,9 +131,8 @@ class PDFParser:
                     })
         
         annotation_info['annotation_types'] = list(annotation_info['annotation_types'])
-        
         return annotation_info
-    
+
     def get_pdf_metadata(self) -> Dict[str, Any]:
         if not self._is_valid or not self.document:
             raise RuntimeError("PDF not loaded. Call validate_file() first.")
