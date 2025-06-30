@@ -24,7 +24,8 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-> ⚠️ On systems like Arch Linux or Debian, installing Python packages system-wide with `pip` may fail due to [PEP 668](https://peps.python.org/pep-0668/). Using a virtual environment avoids these issues.
+> [!NOTE]  
+> On systems like Arch Linux or Debian, installing Python packages system-wide with `pip` may fail due to [PEP 668](https://peps.python.org/pep-0668/). Using a virtual environment avoids these issues.
 
 ## Quick Start
 
