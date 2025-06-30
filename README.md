@@ -1,4 +1,4 @@
-# CheePDF, A simple PDF annotation remover
+# CheePDF, a simple PDF annotation remover
 
 **CheePDF** is a lightweight and efficient Python tool to remove annotations from PDF files. It's ideal for cleaning up PDFs by stripping highlights and other markup. Features include:
 
