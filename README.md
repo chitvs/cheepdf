@@ -9,32 +9,47 @@
 
 ## Installation
 
+### Clone and install in editable mode
+
 ```bash
 git clone https://github.com/chitvs/cheepdf.git
 cd cheepdf
+```
+
+### Using a virtual environment (recommended)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -e .
 ```
+
+> ⚠️ On systems like Arch Linux or Debian, installing Python packages system-wide with `pip` may fail due to [PEP 668](https://peps.python.org/pep-0668/). Using a virtual environment avoids these issues.
 
 ## Quick Start
 
 ### Command Line Usage
 
 Remove annotations from a PDF:
+
 ```bash
 cheepdf input.pdf
 ```
 
 Specify output file:
+
 ```bash
 cheepdf input.pdf output.pdf
 ```
 
 Get annotation information without removing them:
+
 ```bash
 cheepdf input.pdf --info-only
 ```
 
-Remove annotations without creating backup:
+Remove annotations without creating a backup:
+
 ```bash
 cheepdf input.pdf --no-backup
 ```
@@ -61,11 +76,12 @@ Options:
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU Affero General Public License v3.0 – see the [LICENSE](LICENSE) file for details.
 
 ## Version History
 
 ### v0.1.0
+
 - Initial release
 - Basic annotation removal functionality
 - Command-line interface
@@ -74,4 +90,4 @@ This project is licensed under the GNU Affero General Public License v3.0 - see 
 
 ## Acknowledgments
 
-- Built using [PyMuPDF](https://pymupdf.readthedocs.io/) for PDF processing
+CheePDF is built using [PyMuPDF](https://pymupdf.readthedocs.io/) for PDF processing
