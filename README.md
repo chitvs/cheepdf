@@ -27,9 +27,9 @@ pip install -e .
 > [!NOTE]  
 > On systems like Arch Linux or Debian, installing Python packages system-wide with `pip` may fail due to [PEP 668](https://peps.python.org/pep-0668/). Using a virtual environment avoids these issues.
 
-## Quick Start
+## Quick start
 
-### Command Line Usage
+### Command line usage
 
 Remove annotations from a PDF:
 
@@ -55,7 +55,7 @@ Remove annotations without creating a backup:
 cheepdf input.pdf --no-backup
 ```
 
-## Command Line Options
+## Command line options
 
 ```
 cheepdf <input.pdf> [output.pdf] [options]
@@ -75,7 +75,7 @@ Options:
 - Python
 - PyMuPDF (fitz) >= 1.20.0
 
-## Version History
+## Version history
 
 ### v0.1.0
 
