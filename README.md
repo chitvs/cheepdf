@@ -29,7 +29,7 @@ pip install -e .
 
 ## Quick start
 
-### Command line usage
+### Usage
 
 Remove annotations from a PDF:
 
@@ -55,7 +55,7 @@ Remove annotations without creating a backup:
 cheepdf input.pdf --no-backup
 ```
 
-## Command line options
+## Options
 
 ```
 cheepdf <input.pdf> [output.pdf] [options]
