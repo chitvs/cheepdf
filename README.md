@@ -87,7 +87,7 @@ Options:
 
 ## Acknowledgments
 
-CheePDF is built using [PyMuPDF](https://pymupdf.readthedocs.io/) for PDF processing
+CheePDF is built using [PyMuPDF](https://pymupdf.readthedocs.io/) for PDF processing.
 
 ## License
 
