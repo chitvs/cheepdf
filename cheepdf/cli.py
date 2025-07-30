@@ -65,7 +65,7 @@ Examples:
     parser.add_argument(
         "--version",
         action="version",
-        version="cheepdf 0.1.0"
+        version="cheepdf 1.0.0"
     )
     
     return parser

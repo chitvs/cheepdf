@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="cheepdf",
-    version="0.1.0",
+    version="1.0.0",
     author="Alessandro Chitarrini",
     license="AGPL-3.0-or-later",
     description="A simple PDF annotation remover",

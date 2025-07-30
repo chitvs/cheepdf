@@ -77,7 +77,7 @@ Options:
 
 ## Version history
 
-### v0.1.0
+### v1.0.0
 
 - Initial release
 - Basic annotation removal functionality
