@@ -9,7 +9,7 @@
 
 ## Installation
 
-### Clone and install in editable mode
+### Clone the repository
 
 ```bash
 git clone https://github.com/chitvs/cheepdf.git
