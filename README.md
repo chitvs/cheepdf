@@ -73,17 +73,7 @@ Options:
 ## Requirements
 
 - Python
-- PyMuPDF (fitz) >= 1.20.0
-
-## Version history
-
-### v1.0.0
-
-- Initial release
-- Basic annotation removal functionality
-- Command-line interface
-- Backup creation
-- Annotation information gathering
+- PyMuPDF (fitz)
 
 ## Acknowledgments
 
