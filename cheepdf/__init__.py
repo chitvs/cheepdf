@@ -1,5 +1,5 @@
 """
-CheePDF - A simple PDF annotation remover.
+CheePDF -- A simple PDF annotation remover.
 """
 
 from .annotation_remover import AnnotationRemover
